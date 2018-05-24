@@ -5,7 +5,7 @@ module RedmineAgreement
         unloadable
 
         def accept_agreement?
-          self.accept_agreement_at
+          not self.accept_agreement_at.nil?
         end
 
       end
