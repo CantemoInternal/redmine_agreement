@@ -1,0 +1,13 @@
+<% if User.current.admin? %>	
+</fieldset>
+<fieldset class="box tabular">
+  <legend>Terms and Conditions</legend>
+  <p>
+    <label>Accepted</label><%= @user.accept_agreement? %>
+  </p>
+    <% if @user.accept_agreement? %>
+  <p>
+    <label>Accepted at</label> <%=  format_date(@user.accept_agreement_at) %>
+    </p>
+    <% end %>
+<% end %>
